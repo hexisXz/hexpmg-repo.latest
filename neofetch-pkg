@@ -1,0 +1,21 @@
+#!/bin/bash
+
+pkgname='neofetch'
+
+pkgdescription='A command-line system information tool written in bash 3.2+ '
+
+pkgsource='https://github.com/dylanaraps/neofetch.git'
+
+dependencies="make"
+
+pkginstall='make'
+
+
+pkgconfig() {
+	if $dependencies -v make >/dev/null; then
+		git clone https://github.com/dylanaraps/neofetch.git && cd neofetch && sudo make install
+        fi
+}
+
+
+pkgconfig
