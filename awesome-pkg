@@ -13,7 +13,7 @@ pkginstall="make"
 pkmgr=""
 
 pkgconfig () {
-	cd awesomeWM && make && sudo make install	
+	cd awesome && make && sudo make install	
 }
 
 
